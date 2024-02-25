@@ -27,3 +27,28 @@ quadruplicar = criar_multiplicador(4)
 print(duplicar(5))
 print(triplicar(9))
 print(quadruplicar(7))
+
+
+def criar_divisor(divisor):
+    def dividir(numero):
+        return numero / divisor
+    return dividir
+
+metade = criar_divisor(2)
+um_quarto = criar_divisor(4)
+um_decimo = criar_divisor(10)
+
+print(int(metade(30)))
+print(um_quarto(30))
+print(um_decimo(30))
+
+def criar_somador(somador):
+    def somar(numero):
+        return numero + somador
+    return somar
+
+somar_um = criar_somador(1)
+somar_dez = criar_somador(10)
+
+print(somar_um(56))
+print(somar_dez(3))
